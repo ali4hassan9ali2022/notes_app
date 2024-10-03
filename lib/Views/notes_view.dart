@@ -28,3 +28,6 @@ class NotesView extends StatelessWidget {
     );
   }
 }
+
+
+// 0xff62fcd7
