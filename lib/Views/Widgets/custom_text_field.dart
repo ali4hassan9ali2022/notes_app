@@ -1,16 +1,19 @@
 import 'package:flutter/material.dart';
 
 class CustomTextFeild extends StatelessWidget {
-  const CustomTextFeild({super.key, required this.hint, this.maxlines = 1, this.onSaved});
+  const CustomTextFeild(
+      {super.key, required this.hint, this.maxlines = 1, this.onSaved});
   final String hint;
   final int maxlines;
-  final  void Function(String?)? onSaved;
+  final void Function(String?)? onSaved;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       validator: (value) {
-        if(value?.isEmpty ?? true) {
+        if (value?.isEmpty ?? true) {
           return "Field is required";
+        } else {
+          return null;
         }
       },
       onSaved: onSaved,
